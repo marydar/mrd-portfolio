@@ -3,6 +3,7 @@ import Navbar from "./components/navbar/navbar";
 import { UpdateFollower } from "react-mouse-follower";
 import Hero from "./components/Hero/Hero";
 import { Services } from "./components/Services/Services";
+import { Footer } from "./components/Footer/Footer";
 
 const App = () => {
   return <main className="overflow-x-hidden">
@@ -24,6 +25,7 @@ const App = () => {
     }}
     >
       <Services />
+      <Footer />
     </UpdateFollower>
   </main>;
 };
