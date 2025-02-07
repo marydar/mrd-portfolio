@@ -16,7 +16,15 @@ const App = () => {
       <Navbar />
       <Hero />
     </UpdateFollower>
-    <Services />
+    <UpdateFollower
+    mouseOptions={{
+      backgroundColor:"black",
+      zIndex: 999,
+      followSpeed: 1.5,
+    }}
+    >
+      <Services />
+    </UpdateFollower>
   </main>;
 };
 
