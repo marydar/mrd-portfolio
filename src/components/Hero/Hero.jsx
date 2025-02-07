@@ -213,7 +213,7 @@ const Hero = () => {
             </div>
             {/* whatsapp icon */}
             {/* <div className='text-3xl text-white fixed bottom-10 right-10 hover:rotate-[360deg] duration-500 z-[99999] mix-blend-dif'> */}
-            <div className='text-3xl text-white fixed right-10'>
+            <div className='text-3xl text-white fixed bottom-10 right-10'>
                 <a href=''>
                     <FaWhatsapp />
                 </a>
