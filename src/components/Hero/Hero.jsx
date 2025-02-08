@@ -1,9 +1,9 @@
 import { sub } from 'framer-motion/client'
 import React, { act } from 'react'
-import Headphone1 from "../../assets/icons/headphone1.png"
-import Headphone2 from "../../assets/icons/headphone2.png"
-import Headphone3 from "../../assets/icons/headphone1.png"
-import Headphone4 from "../../assets/icons/headphone2.png"
+import Headphone1 from "../../assets/icons/Headphone1.png"
+import Headphone2 from "../../assets/icons/Headphone2.png"
+import Headphone3 from "../../assets/icons/Headphone1.png"
+import Headphone4 from "../../assets/icons/Headphone2.png"
 import { FaWhatsapp } from 'react-icons/fa'
 import { UpdateFollower } from 'react-mouse-follower'
 import { AnimatePresence, easeIn, easeInOut, motion } from 'framer-motion'
