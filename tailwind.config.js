@@ -13,6 +13,7 @@ export default {
       fontFamily: {
         poppins : ['Poppins', 'sans-serif'],
         varela: ['Varela Round', 'sans-serif'],
+        orbitron: ['Orbitron', 'sans-serif'],
       },
       container: {
         center: true,

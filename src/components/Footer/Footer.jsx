@@ -1,65 +1,86 @@
 import React from 'react'
-import { FaGoogle, FaInstagram, FaTelegram, FaFacebook } from 'react-icons/fa'
+import { FaGoogle, FaInstagram, FaTelegram, FaGithub, FaEnvelope } from 'react-icons/fa'
 import { FaMapLocation , FaPhone} from 'react-icons/fa6'
+import { UpdateFollower } from "react-mouse-follower";
+import { motion } from "framer-motion";
 
+const NavbarMenue = [
+        {
+            id: 1,
+            name: "About",
+            link: "#"
+        },
+        {
+            id: 2,
+            name: "Projects",
+            link: "#"
+        },
+        {
+            id: 3,
+            name: "Contact",
+            link: "#" 
+        },
+    ]
 export const Footer = () => {
   return (
     <>
-    <footer className='bg-primary pt-12 pb-8 text-white'>
-        <div className="container">
-            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8'>
-                {/* company details */}
-                <div className='space-y-6'>
-                    <h1 className='text-3xl font-bold uppercase'>Playing</h1>
-                    <p className='text-sm max-w-[300px]'>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                    <div>
-                        <p className='flex items-center gap-2'>
-                            <FaPhone/>
-                            +1 (123) 456 7890
-                        </p>
-                        <p className='flex items-center gap-2 mt-2'> 
-                            {" "}
-                            <FaMapLocation/> Noida, Utter Pradesh
-                        </p>
+    <footer className="bg-[#060910] border-t-[0.5px] border-t-[#00E5FF] shadow-[inset_0_0_60px_rgba(0,229,255,0.15)]">
+        <div className="container flex items-center justify-evenly py-4 px-4 md:px-8">
+            <div className="hidden md:block">
+                        <ul className="flex items-center gap-4">
+                            {NavbarMenue.map((item) => (
+                                <li key = {item.id}>
+                                    <UpdateFollower
+                                    mouseOptions={{
+                                        backgroundColor:"white",
+                                        zIndex: 999,
+                                        followSpeed: 1.5,
+                                        scale: 5,
+                                        mixBlendMode:"difference",
+                                    }}
+                                    >
+                                    <a href = {item.link} className="font-medium font-orbitron text-[16px] text-[#028392] [letter-spacing:1.8px] [text-shadow:_0_4px_5px_rgba(143,243,255,0.25)] [--stroke:0.5px_#BADADE] [-webkit-text-stroke:var(--stroke)]">
+                                        {item.name}
+                                    </a>
+                                    </UpdateFollower>
+                                </li>
+                            ))}
+                            <UpdateFollower
+                                mouseOptions={{
+                                    backgroundColor:"white",
+                                    zIndex: 999,
+                                    followSpeed: 1.5,
+                                    scale: 5,
+                                    mixBlendMode:"difference",
+                                }}
+                            >
+                            </UpdateFollower>
+                        </ul>
                     </div>
-                </div>
-                {/* footer links */}
-                <div className='space-y-6'>
-                    <h1 className='text-3xl font-bold uppercase'>Quick Links</h1>
-                    <div className='grid grid-cols-1 sm:grid-cols-2 gap-3'>
-                        <div>
-                            <ul className='space-y-2'>
-                                <li>Home</li>
-                                <li>About</li>
-                                <li>Contact us</li>
-                                <li>Privacy Policy</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul className='space-y-2'>
-                                <li>Home</li>
-                                <li>About</li>
-                                <li>Contact us</li>
-                                <li>Privacy Policy</li>
-                            </ul>
-                        </div>
+                    <div
+                        className='py-2 font-normal rounded-sm flex gap-2 items-start'
+                    >
+                        <div className='text-3xl text-[#87F3FF]'>
+                        <a href=''>
+                            <FaGithub />
+                        </a>
+                        </div> 
+                        <div className='text-3xl text-[#87F3FF]'>
+                        <a href=''>
+                            <FaTelegram />
+                        </a>
+                        </div> 
+                        <div className='text-3xl text-[#87F3FF]'>
+                        <a href=''>
+                            <FaInstagram />
+                        </a>
+                        </div> 
+                        <div className='text-3xl text-[#87F3FF]'>
+                        <a href=''>
+                            <FaEnvelope />
+                        </a>
+                        </div> 
                     </div>
-                </div>
-                {/* social links */}
-                <div className='space-y-6'>
-                    <h1 className='text-3xl font-bold '>Follow Us</h1>
-                    <div className='flex items-center gap-3'>
-                        <FaFacebook className='text-3xl hover:scale-105 duration-300'/>
-                        <FaInstagram className='text-3xl hover:scale-105 duration-300' />
-                        <FaTelegram className='text-3xl hover:scale-105 duration-300' />
-                        <FaGoogle className='text-3xl hover:scale-105 duration-300' />
-                    </div>
-                    <div className='flex items-center gap-3'>
-                        <p> Payment Methods</p>
-                    </div>
-                </div>
-
-            </div>
         </div>
     </footer>
     </>
