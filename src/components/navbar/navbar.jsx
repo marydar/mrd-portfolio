@@ -1,6 +1,4 @@
-import React from "react";
 import { MdMenu } from "react-icons/md";
-import { SlEarphones } from "react-icons/sl";
 import { UpdateFollower } from "react-mouse-follower";
 import { motion } from "framer-motion";
 
@@ -9,17 +7,17 @@ const Navbar = () => {
         {
             id: 1,
             name: "About",
-            link: "#"
+            link: "#about"
         },
         {
             id: 2,
             name: "Projects",
-            link: "#"
+            link: "#projects"
         },
         {
             id: 3,
             name: "Contact",
-            link: "#" 
+            link: "#contact" 
         },
     ]
   return (

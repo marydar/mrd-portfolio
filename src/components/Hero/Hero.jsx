@@ -1,16 +1,10 @@
-import { sub } from 'framer-motion/client'
-import React, { act } from 'react'
-import Headphone1 from "../../assets/icons/scene.png"
-import Headphone2 from "../../assets/icons/Headphone2.png"
-import Headphone3 from "../../assets/icons/Headphone1.png"
-import Headphone4 from "../../assets/icons/Headphone2.png"
-// import { FaWhatsapp, FaGithub, FaTelegram, FaInstagram, FaEmail } from 'react-icons/fa'
-import { FaWhatsapp } from 'react-icons/fa'
+import React from 'react'
 import { FaGithub } from 'react-icons/fa'
-import { FaTelegram, FaInstagram} from 'react-icons/fa'
+import { FaTelegram, FaInstagram, FaGlobe} from 'react-icons/fa'
 import { FaEnvelope } from 'react-icons/fa' 
 import { UpdateFollower } from 'react-mouse-follower'
-import { AnimatePresence, easeIn, easeInOut, motion } from 'framer-motion'
+import { AnimatePresence, easeInOut, motion } from 'framer-motion'
+import { ProjectsData } from '../data/projects-data'
 
 const fadeUp = (delay) => {
     return {
@@ -45,47 +39,20 @@ const abouTMeData = {
     title: "Software Developer",
     subTitle: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
 }
-const HeadphoneData = [
-    {
-        id: 1,
-        image: Headphone1,
-        title: "2D-platformer",
-        subTitle: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-        price: "₹ 199",
-        modal:"Modal Brown",
-        bgColor: "#8b5958",
+// const indices = [3, 5, 6];
+const indices = [5, 6, 7];
+const SelectedProjectsData = indices.map(index => ProjectsData[index]);
 
-    },
-    {
-        id: 2,
-        image: Headphone1,
-        title: "2D-platformer",
-        subTitle: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-        price: "₹ 199",
-        modal:"lime Green",
-        bgColor: "#638153",
 
-    },
-    {
-        id: 3,
-        image: Headphone1,
-        title: "2D-platformer",
-        subTitle: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-        price: "₹ 199",
-        modal:"ocean Blue",
-        bgColor: "#5d818c",
-
-    },
-]
 
 const Hero = () => {
-    const [activeData, setActiveData] = React.useState(HeadphoneData[0]);
+    const [activeData, setActiveData] = React.useState(SelectedProjectsData[0]);
     const handleActiveData = (data) => {
         setActiveData(data)
     }
   return (
     <>
-    <section className='bg-[#060910] bg-opacity-30 text-white font-varela border-b border-[#00E5FF] drop-shadow-xl'>
+    <section id='about' className='bg-[#060910] bg-opacity-30 text-white font-varela border-b border-[#00E5FF] drop-shadow-xl'>
         <div className="container grid grid-cols-1 md:grid-cols-2 min-h-[700px]">
             {/* headphone info */}
             <div className='flex  flex-col justify-center py-14 md:py-0 xl:max-w-[500px]'>
@@ -198,7 +165,7 @@ const Hero = () => {
                     </div>
                     {/* swich headphones*/}
                     <div className='grid grid-cols-3 gap-10'>
-                        {HeadphoneData.map((item) =>{
+                        {SelectedProjectsData.map((item) =>{
                             return(
                                     <div 
                                         key={item.id}
@@ -209,12 +176,22 @@ const Hero = () => {
                                         </div>
                                         <div className='space-y-2'>
                                             <p 
-                                                className="font-bold font-orbitron text-[12px] text-[#87F3FF] [text-shadow:_5px_10px_15px_rgba(0,229,225,0.25)] [--stroke:1px_#5FAEB8] [-webkit-text-stroke:var(--stroke)]">
+                                                className="h-[30px] shrink-0 truncate font-bold font-orbitron text-[12px] text-[#87F3FF] [text-shadow:_5px_10px_15px_rgba(0,229,225,0.25)] [--stroke:1px_#5FAEB8] [-webkit-text-stroke:var(--stroke)]">
                                                 {item.title}
                                             </p>
                                             <div className='flex items-center gap-2'>
-                                                <FaGithub className='text-[#87F3FF]'/>
-                                                <FaTelegram className='text-[#87F3FF]'/>
+                                                <div className='text-2xl text-[#87F3FF]'>
+                                                    <a href={item.githubLink} target="_blank">
+                                                        <FaGithub />
+                                                    </a>
+                                                </div> 
+                                                {item.websiteLink && 
+                                                    <div className='text-2xl text-[#87F3FF]'>
+                                                        <a href={item.websiteLink} target="_blank">
+                                                            <FaGlobe />
+                                                        </a>
+                                                    </div>
+                                                }
                                             </div>
                                         </div>
 

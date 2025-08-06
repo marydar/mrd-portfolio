@@ -1,30 +1,27 @@
-import React from 'react'
-import { FaGoogle, FaInstagram, FaTelegram, FaGithub, FaEnvelope } from 'react-icons/fa'
-import { FaMapLocation , FaPhone} from 'react-icons/fa6'
+import { FaInstagram, FaTelegram, FaGithub, FaEnvelope } from 'react-icons/fa'
 import { UpdateFollower } from "react-mouse-follower";
-import { motion } from "framer-motion";
 
 const NavbarMenue = [
         {
             id: 1,
             name: "About",
-            link: "#"
+            link: "#about"
         },
         {
             id: 2,
             name: "Projects",
-            link: "#"
+            link: "#projects"
         },
         {
             id: 3,
             name: "Contact",
-            link: "#" 
+            link: "#contact" 
         },
     ]
 export const Footer = () => {
   return (
     <>
-    <footer className="bg-[#060910] border-t-[0.5px] border-t-[#00E5FF] shadow-[inset_0_0_60px_rgba(0,229,255,0.15)]">
+    <footer id='contact' className="bg-[#060910] border-t-[0.5px] border-t-[#00E5FF] shadow-[inset_0_0_60px_rgba(0,229,255,0.15)]">
         <div className="container flex items-center justify-evenly py-4 px-4 md:px-8">
             <div className="hidden md:block">
                         <ul className="flex items-center gap-4">
