@@ -40,7 +40,7 @@ const abouTMeData = {
     subTitle: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
 }
 // const indices = [3, 5, 6];
-const indices = [5, 6, 7];
+const indices = [0, 1, 2];
 const SelectedProjectsData = indices.map(index => ProjectsData[index]);
 
 
@@ -53,10 +53,10 @@ const Hero = () => {
   return (
     <>
     <section id='about' className='bg-[#060910] bg-opacity-30 text-white font-varela border-b border-[#00E5FF] drop-shadow-xl'>
-        <div className="container grid grid-cols-1 md:grid-cols-2 min-h-[700px]">
+        <div className="container grid grid-cols-1 xl:grid-cols-2 min-h-[700px]">
             {/* headphone info */}
             <div className='flex  flex-col justify-center py-14 md:py-0 xl:max-w-[500px]'>
-                <div className='space-y-5 text-center md:text-left'>
+                <div className='space-y-5 text-center xl:text-left'>
                     <AnimatePresence mode='wait'>
                         <UpdateFollower
                             mouseOptions={{
@@ -128,7 +128,7 @@ const Hero = () => {
                                 initial='hidden'
                                 animate='show'
                                 exit='exit'
-                                className='py-2 font-normal rounded-sm flex gap-2 justify-center md:justify-start'
+                                className='py-2 font-normal rounded-sm flex gap-2 justify-center xl:justify-start'
                             >
                                 <div className='text-2xl text-[#87F3FF]'>
                                 <a href=''>
@@ -158,7 +158,7 @@ const Hero = () => {
                         </UpdateFollower>
                     </AnimatePresence>
                     {/* headphones seprater */}
-                    <div className='flex items-center justify-center md:justify-start gap-4 !mt-24'>
+                    <div className='flex items-center justify-center xl:justify-start gap-4 !mt-24'>
                         <div className='w-20 h-[1px] bg-[#5AA2AA]'></div>
                         <p className='uppercase text-[16px] text-[#5AA2AA]'>Selected Projects</p> 
                         <div className='w-20 h-[1px] bg-[#5AA2AA]'></div>
@@ -171,22 +171,22 @@ const Hero = () => {
                                         key={item.id}
                                         onClick={() => handleActiveData(item)}
                                         className='grid grid-cols-2 cursor-pointer gap-2'>
-                                        <div className='border-[1px]border-[#5FAEB8] rounded-full'>
-                                        <img src={item.image} alt="" className="w-[60px] h-[60px] rounded-full object-cover object-center"/>
+                                        <div className='rounded-full p-0'>
+                                        <img src={item.image} alt="" className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] xl:w-[60px] xl:h-[60px] rounded-full object-cover object-center"/>
                                         </div>
                                         <div className='space-y-2'>
                                             <p 
-                                                className="h-[30px] shrink-0 truncate font-bold font-orbitron text-[12px] text-[#87F3FF] [text-shadow:_5px_10px_15px_rgba(0,229,225,0.25)] [--stroke:1px_#5FAEB8] [-webkit-text-stroke:var(--stroke)]">
+                                                className="h-[20px] md:h-[20px] xl:h-[30px] shrink-0 truncate font-bold font-orbitron text-[8px] md:text-[12px] xl:text-[12px] text-[#87F3FF] [text-shadow:_5px_10px_15px_rgba(0,229,225,0.25)] [--stroke:1px_#5FAEB8] [-webkit-text-stroke:var(--stroke)]">
                                                 {item.title}
                                             </p>
                                             <div className='flex items-center gap-2'>
-                                                <div className='text-2xl text-[#87F3FF]'>
+                                                <div className='text-lg md:text-lg xl:text-2xl text-[#87F3FF]'>
                                                     <a href={item.githubLink} target="_blank">
                                                         <FaGithub />
                                                     </a>
                                                 </div> 
                                                 {item.websiteLink && 
-                                                    <div className='text-2xl text-[#87F3FF]'>
+                                                    <div className='text-lg md:text-lg xl:text-2xl text-[#87F3FF]'>
                                                         <a href={item.websiteLink} target="_blank">
                                                             <FaGlobe />
                                                         </a>
@@ -215,7 +215,7 @@ const Hero = () => {
                             exit={{ opacity: 0, scale:0.9, y: 100, 
                                 transition: { duration: 0.2 }
                             }}
-                            className='pb-[15px] md:pb-[25px] xl:pb-[40px] w-[300px] md:w-[400px] xl:w-[550px] rounded-[20px] bg-[#8bf3ff] border-[2px] border-[#3B6C72] shadow-[0_4px_15px_rgba(135,243,255,0.25)]'
+                            className=' w-[300px] md:w-[350px] xl:w-[550px] rounded-[10px] bg-[#8bf3ff] border-[2px] border-[#3B6C72] shadow-[0_4px_15px_rgba(135,243,255,0.25)]'
                             
                             >
                                 <img
@@ -223,13 +223,6 @@ const Hero = () => {
                                 />
                             </motion.div>
                 </AnimatePresence>
-            </div>
-            {/* whatsapp icon */}
-            {/* <div className='text-3xl text-white fixed bottom-10 right-10 hover:rotate-[360deg] duration-500 z-[99999] mix-blend-dif'> */}
-            <div className='text-3xl text-white fixed bottom-10 right-10'>
-                <a href=''>
-                    {/* <FaWhatsapp /> */}
-                </a>
             </div>
         </div>
     </section>

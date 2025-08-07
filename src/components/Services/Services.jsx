@@ -22,13 +22,13 @@ export const Services = () => {
                             }}
                         >
                             {/* className="bg-[#060910] border-t-[0.5px] border-t-[#00E5FF] shadow-[inset_0_0_60px_rgba(0,229,255,0.15)]" */}
-                            <div className='px-6 flex flex-col items-center justify-center p-5 max-w-[350px] mx-auto rounded-xl bg-[rgba(26,29,42,0.30)] border-[0.5px] border-[#00E5FF] shadow-[inset_0_0_30px_rgba(0,229,255,0.25)]'>
+                            <div className='px-6 flex flex-col items-center justify-center p-5 max-w-[350px] max-h-[300px] mx-auto rounded-xl bg-[rgba(26,29,42,0.30)] border-[0.5px] border-[#00E5FF] shadow-[inset_0_0_30px_rgba(0,229,255,0.25)]'>
                                 <div className='rounded-sm object-cover '>
-                                  <img src={data.image} alt="" className='rounded-md mb-4 w-[300px] h-[150px]'/>
+                                  <img src={data.image} alt="" className='rounded-md mb-4 w-[300px] h-[150px] md:w-[250px] md:h-[100px] xl:w-[300px] xl:h-[150px]'/>
                                 </div>
                                 <div className='text-center space-y-2'>
                                     <div className='flex items-center justify-between'>
-                                      <h1 className="font-bold font-orbitron text-[20px] text-[#8BF3FF] [text-shadow:_0px_4px_20px_rgba(0,229,225,0.25)] [--stroke:1px_#3B6C72] [-webkit-text-stroke:var(--stroke)]">{data.title}</h1>
+                                      <h1 className="font-bold font-orbitron text-[20px] md:text-[16px] text-[#8BF3FF] [text-shadow:_0px_4px_20px_rgba(0,229,225,0.25)] [--stroke:1px_#3B6C72] [-webkit-text-stroke:var(--stroke)]">{data.title}</h1>
                                       <div
                                         className='py-2 font-normal rounded-sm flex gap-2 items-start'
                                       >
