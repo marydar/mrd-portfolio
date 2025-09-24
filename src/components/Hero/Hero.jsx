@@ -37,7 +37,7 @@ const fadeUp = (delay) => {
 const abouTMeData = {
     id: 1,
     title: "Software Developer",
-    subTitle: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    subTitle: "I'm a Computer Engineering  student at the University of Isfahan with practical experience in full-stack development. I am always looking to learn new technologies and improve my skills",
 }
 // const indices = [3, 5, 6];
 const indices = [0, 1, 2];
@@ -52,7 +52,7 @@ const Hero = () => {
     }
   return (
     <>
-    <section id='about' className='bg-[#060910] bg-opacity-30 text-white font-varela border-b border-[#00E5FF] drop-shadow-xl'>
+    <section id='about' className='cursor-none bg-[#060910] bg-opacity-30 text-white font-varela border-b border-[#00E5FF] drop-shadow-xl'>
         <div className="container grid grid-cols-1 xl:grid-cols-2 min-h-[700px]">
             {/* headphone info */}
             <div className='flex  flex-col justify-center py-14 md:py-0 xl:max-w-[500px]'>
@@ -111,7 +111,7 @@ const Hero = () => {
                                 followSpeed: 0.5,
                                 rotate: -720,
                                 mixBlendMode: "difference",
-                                scale: 10,
+                                scale: 5,
                              }}
                         >
                             <motion.h1 
@@ -131,22 +131,22 @@ const Hero = () => {
                                 className='py-2 font-normal rounded-sm flex gap-2 justify-center xl:justify-start'
                             >
                                 <div className='text-2xl text-[#87F3FF]'>
-                                <a href=''>
+                                <a href='https://github.com/marydar' target="_blank">
                                     <FaGithub />
                                 </a>
                                 </div> 
                                 <div className='text-2xl text-[#87F3FF]'>
-                                <a href=''>
+                                <a href='https://t.me/Maryamdar0' target="_blank">
                                     <FaTelegram />
                                 </a>
                                 </div> 
                                 <div className='text-2xl text-[#87F3FF]'>
-                                <a href=''>
+                                <a href='https://www.instagram.com/maryamdar_/' target="_blank">
                                     <FaInstagram />
                                 </a>
                                 </div> 
                                 <div className='text-2xl text-[#87F3FF]'>
-                                <a href=''>
+                                <a href='mailto:maryamdar1384@gmail.com' target="_blank">
                                     <FaEnvelope />
                                 </a>
                                 </div> 

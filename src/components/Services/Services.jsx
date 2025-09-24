@@ -5,7 +5,7 @@ import { ProjectsData } from '../data/projects-data'
 export const Services = () => {
   return (
     <>
-        <section id='projects' className='bg-[#060910] py-12'>
+        <section id='projects' className='bg-[#060910] py-12 cursor-none'>
             <div className='container'>
                 <h1 className="pb-12 text-center font-bold font-orbitron text-[36px] text-[#87F3FF] [text-shadow:_0px_4px_15px_rgba(0,229,225,0.25)] [--stroke:1px_#5FAEB8] [-webkit-text-stroke:var(--stroke)]">Projects</h1>
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12'>
@@ -18,10 +18,9 @@ export const Services = () => {
                                 followSpeed: 0.5,
                                 scale: 5,
                                 rotate: 720,
-                                mixBlendMode:"darken",
+                                mixBlendMode:"difference",
                             }}
                         >
-                            {/* className="bg-[#060910] border-t-[0.5px] border-t-[#00E5FF] shadow-[inset_0_0_60px_rgba(0,229,255,0.15)]" */}
                             <div className='px-6 flex flex-col items-center justify-center p-5 max-w-[350px] max-h-[300px] mx-auto rounded-xl bg-[rgba(26,29,42,0.30)] border-[0.5px] border-[#00E5FF] shadow-[inset_0_0_30px_rgba(0,229,255,0.25)]'>
                                 <div className='rounded-sm object-cover '>
                                   <img src={data.image} alt="" className='rounded-md mb-4 w-[300px] h-[150px] md:w-[250px] md:h-[100px] xl:w-[300px] xl:h-[150px]'/>
